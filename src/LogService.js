@@ -90,7 +90,7 @@ class LogService {
         let stringified = JSON.stringify(message, additionalProperties, 2);
 
         if (stringified === void 0) {
-            stringified = message.toString();
+            stringified = (message || '').toString();
         }
 
         if (stringified === '{}') {
